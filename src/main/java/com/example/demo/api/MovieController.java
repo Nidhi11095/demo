@@ -1,9 +1,7 @@
 package com.example.demo.api;
 
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
-import java.util.Queue;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +32,7 @@ public class MovieController {
 	public MovieController(MovieService movieService) {
 		
 		this.movieService = movieService;
-		Queue<Integer> q = new LinkedList<>();
+		//Queue<Integer> q = new LinkedList<>();
 		
 	}
   
