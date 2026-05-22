@@ -20,10 +20,9 @@ import com.example.demo.model.Movie;
 import com.example.demo.service.MovieService;
 import org.springframework.validation.annotation.Validated;
 
-
-@RequestMapping("api/v1/movie")
 @RestController
-@Validated
+@RequestMapping("api/v1/movie")
+
 public class MovieController {
 	
 	private final MovieService movieService;
@@ -44,10 +43,18 @@ public class MovieController {
 		
 	}
 	
-	@GetMapping
-	public List<Movie> getMovies() {
-		return movieService.getAllMovies();
-	}
+//	@RequestMapping("/")
+//	@GetMapping
+//	public String home() {
+//		return "Welcome Nidhi";
+//	}
+	
+//	@GetMapping
+//	@RequestMapping("/getMovies")
+//	public List<Movie> getMovies() {
+//		System.out.println("get all movies");
+//		return movieService.getAllMovies();
+//	}
 	
 //	@GetMapping(path = "{id}")
 //	public Movie getMovieById(@NonNull @PathVariable("id") UUID id) {
@@ -60,8 +67,17 @@ public class MovieController {
 //		}
 //		
 //	}
+	
+	@GetMapping("/getMovies")
+	public List<Movie> getMovies() {
+	    System.out.println("get all movies");
+	    return movieService.getAllMovies();
+	}
+	
 	@GetMapping("/{id}")
 	public ResponseEntity<Movie> getMovieById(@PathVariable UUID id) {
+		
+		System.out.println("herre");
 	    Optional<Movie> movie = movieService.getMovieById(id);
 	    
 	    if (movie.isPresent()) {

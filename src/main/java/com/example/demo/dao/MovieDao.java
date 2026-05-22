@@ -25,5 +25,7 @@ public interface MovieDao {
 	public boolean deleteMovieById(UUID id);
 	
 	public void updateMovieRatingById(UUID id, int newRating);
+	
+	public Movie getMovieByName(String name);
 
 }

@@ -39,6 +39,10 @@ public class MovieService {
 		return movieDao.getMovieById(id);
 	}
 	
+	public Movie getMovieByName(String name) {
+		return movieDao.getMovieByName(name);
+	}
+	
 	public void updateMovieRatingById(UUID id, int newRating) {
 		movieDao.updateMovieRatingById(id, newRating);
 	}

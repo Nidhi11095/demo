@@ -55,6 +55,21 @@ public class FakeMovieDataAccessService implements MovieDao{
 		
 		
 	}
+
+
+	
+	public Movie getMovieByName(String name) {
+		
+		
+		
+		for(Movie m : DB) {
+			if(m.getName().equals(name)) {
+				return m;
+			}
+		}
+		
+		return null;
+	}
 	
 	
 	

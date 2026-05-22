@@ -52,4 +52,10 @@ public class MongoMovieDao implements MovieDao {
             repository.save(movie);
         });
     }
+
+	@Override
+	public Movie getMovieByName(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
